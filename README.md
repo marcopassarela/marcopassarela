@@ -34,4 +34,4 @@
 <p align="center">   <img alingn="center" src="https://profile-counter.glitch.me/marcopassarela/count.svg" /></p>
 
 
-![snake gif](https://github.com/marcopassarela/marcopassarela/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://github.com/marcopassarela/marcopassarela/blob/output/github-contribution-grid-snake.svg)
