@@ -23,4 +23,4 @@
   <a href="https://www.linkedin.com/in/marco-passarela/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" targe="_bank"></a>
 </div>
 
-  
+  ! [Snake animation](https://github.com/marcopassarela/marcopassarela/blob/output/github-construbution-grid-snake.svg)
