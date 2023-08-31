@@ -1,24 +1,5 @@
 name: Generate Datas
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-
-      - name: Run GitHub Pages Action
-        uses: crazy-max/ghaction-github-pages@v2.1.3
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-          NODE_VERSION: 16
-
-
 on:
   schedule: # execute every 12 hours
     - cron: "* */12 * * *"
