@@ -18,20 +18,20 @@
 <a href="https://www.linkedin.com/in/marco-passarela/" target="_bank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"</a>
 </div> 
  
-### Habilidades principais:
+### Main skills::
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>&nbsp;
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />&nbsp;
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
           
  
-### Ferramentas:
+### Tools::
 ![Visual Studio](https://img.shields.io/badge/-Visual%20Studio-0D1117?style=for-the-badge&logo=visual-studio&logoColor=C8A2C8&labelColor=0D1117)&nbsp;
   
-### Estudando neste momento:
+### Studying at the moment::
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />&nbsp;
 
 <div align="center">
-<br><p align="centre"><b>Contagem de visitantes</b></p>  
+<br><p align="centre"><b>Visitor count</b></p>  
 <p align="center"><img align="center" src="https://profile-counter.glitch.me/{marcopassarela}/count.svg" /></p> 
 <br></div>
 
