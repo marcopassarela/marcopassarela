@@ -9,8 +9,7 @@
 
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=marcopassarela&theme=darkhub&column=7&margin-w=15&margin-h=15"/>
-  <img src="https://github-profile-trophy.vercel.app/?username=marcopassarela&theme=darkhub&column=7&margin-w=15&margin-h=15"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=marcopassarela&theme=onestar&theme=onestar&column=7&margin-w=15&margin-h=15"/>
 </p>
 
 <div align="center">  
