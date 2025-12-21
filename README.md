@@ -26,9 +26,6 @@
 ### Studying at the moment:
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />&nbsp;
 
-<div align="center">
-<br><p align="center"><b>Visitor count</b></p>  
-<p align="center"><img align="center" src="https://profile-counter.glitch.me/marcopassarela/count.svg" /></p> 
-<br></div>
+</div>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=footer"/>
