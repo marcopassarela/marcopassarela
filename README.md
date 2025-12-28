@@ -30,8 +30,8 @@
 
 ### My Current Projects
 
-* 💻 Criando projetos de código aberto!
-* 🌱 Apaixonado por tecnologia e inovação.
+* 💻 Creating open-source projects!
+* 🌱 Passionate about technology and innovation.
 
 #
 
@@ -46,6 +46,6 @@
 
 #
 
-<em>"Algumas pessoas chamam isso de sorte, eu chamo de DEUS!"</em>
+<em>"Some people call it luck, I call it GOD!"</em>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=fff&height=120&section=footer"/>
