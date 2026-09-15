@@ -1,5 +1,4 @@
 import os
-import re
 import requests
 
 USER_NAME = "marcopassarela"
@@ -9,7 +8,7 @@ HEADERS = {"Authorization": f"bearer {TOKEN}"} if TOKEN else {}
 
 def query_graphql(query, variables):
     response = requests.post(
-        "[https://api.github.com/graphql](https://api.github.com/graphql)",
+        "https://api.github.com/graphql",
         json={"query": query, "variables": variables},
         headers=HEADERS
     )
@@ -26,15 +25,6 @@ def get_stats():
           totalCount
           nodes {
             stargazerCount
-            defaultBranchRef {
-              target {
-                ... on Commit {
-                  history {
-                    totalCount
-                  }
-                }
-              }
-            }
           }
         }
         contributionsCollection {
@@ -49,25 +39,13 @@ def get_stats():
     res = query_graphql(query, {"user": USER_NAME})
     data = res["data"]["user"]
     
-    # Busca simplificada de linhas alteradas
-    loc_query = """
-    query($user: String!) {
-      user(login: $user) {
-        contributionsCollection {
-          totalCommitContributions
-        }
-      }
-    }
-    """
-    
     repos = data["repositories"]["totalCount"]
     stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
     commits = data["contributionsCollection"]["totalCommitContributions"]
     followers = data["followers"]["totalCount"]
     
-    # Estimativa e contagem de linhas (LOC) baseada em métricas de contribuição
-    loc_additions = commits * 145  # Média estimada de adições por commit
-    loc_deletions = commits * 32   # Média estimada de deleções por commit
+    loc_additions = commits * 145
+    loc_deletions = commits * 32
     total_loc = loc_additions - loc_deletions
 
     return {
@@ -77,27 +55,49 @@ def get_stats():
         "followers": f"{followers:,}",
         "loc": f"{total_loc:,}",
         "loc_add": f"{loc_additions:,}",
-        "loc_del": f"{loc_deletions:,}"
+        "loc_del": f"{loc_del_add := loc_deletions:,}"
     }
 
-def update_readme():
+def generate_svg():
     stats = get_stats()
-    print(f"Estatísticas coletadas: {stats}")
+    
+    svg = f'''<svg fill="none" width="600" height="420" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg {{ fill: #0d1117; rx: 8px; }}
+    .title {{ font: bold 14px 'Courier New', monospace; fill: #58a6ff; }}
+    .label {{ font: 13px 'Courier New', monospace; fill: #8b949e; }}
+    .white {{ font: 13px 'Courier New', monospace; fill: #c9d1d9; }}
+    .green {{ font: bold 13px 'Courier New', monospace; fill: #3fb950; }}
+    .blue {{ font: 13px 'Courier New', monospace; fill: #58a6ff; }}
+    .red {{ font: 13px 'Courier New', monospace; fill: #f85149; }}
+    .line {{ font: 13px 'Courier New', monospace; fill: #30363d; }}
+  </style>
+  <rect width="100%" height="100%" class="bg" />
+  
+  <text x="20" y="30" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
+  
+  <text x="20" y="60" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
+  <text x="20" y="80" class="white">. Uptime: <tspan class="line">............................</tspan> 24 anos, 2 meses</text>
+  <text x="20" y="100" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
+  <text x="20" y="120" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
+  
+  <text x="20" y="160" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
+  <text x="20" y="180" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, Markdown, YAML</tspan></text>
+  <text x="20" y="200" class="blue">. Languages.Real: <tspan class="line">............</tspan> <tspan class="white">Português, English</tspan></text>
+  
+  <text x="20" y="240" class="title">- Contact <tspan class="line">-------------------------------------------------</tspan></text>
+  <text x="20" y="265" class="orange">. Email: <tspan class="line">...............................</tspan> <tspan class="blue">seu-email@exemplo.com</tspan></text>
+  <text x="20" y="285" class="orange">. LinkedIn: <tspan class="line">............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
+  <text x="20" y="305" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
+  
+  <text x="20" y="345" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
+  <text x="20" y="370" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> Stars: <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
+  <text x="20" y="390" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> Followers: <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
+  <text x="20" y="410" class="orange">. Lines of Code: <tspan class="green">{stats['loc']}</tspan> ( <tspan class="green">{stats['loc_add']}++</tspan>, <tspan class="red">{stats['loc_del']}--</tspan> )</text>
+</svg>'''
 
-    if os.path.exists("README.md"):
-        with open("README.md", "r", encoding="utf-8") as f:
-            content = f.read()
-
-        content = re.sub(r"<!-- REPOS -->[\d,]+", f"<!-- REPOS -->{stats['repos']}", content)
-        content = re.sub(r"<!-- STARS -->[\d,]+", f"<!-- STARS -->{stats['stars']}", content)
-        content = re.sub(r"<!-- COMMITS -->[\d,]+", f"<!-- COMMITS -->{stats['commits']}", content)
-        content = re.sub(r"<!-- FOLLOWERS -->[\d,]+", f"<!-- FOLLOWERS -->{stats['followers']}", content)
-        content = re.sub(r"<!-- LOC -->[\d,]+", f"<!-- LOC -->{stats['loc']}", content)
-        content = re.sub(r"<!-- LOC_ADD -->[\d,]+", f"<!-- LOC_ADD -->{stats['loc_add']}", content)
-        content = re.sub(r"<!-- LOC_DEL -->[\d,]+", f"<!-- LOC_DEL -->{stats['loc_del']}", content)
-
-        with open("README.md", "w", encoding="utf-8") as f:
-            f.write(content)
+    with open("terminal.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
 
 if __name__ == "__main__":
-    update_readme()
+    generate_svg()
