@@ -9,7 +9,7 @@ HEADERS = {"Authorization": f"bearer {TOKEN}"} if TOKEN else {}
 
 def query_graphql(query, variables):
     response = requests.post(
-        "[https://api.github.com/graphql](https://api.github.com/graphql)",
+        "https://api.github.com/graphql",
         json={"query": query, "variables": variables},
         headers=HEADERS
     )
@@ -99,7 +99,7 @@ def generate_svg():
         y_pos = start_y + (i * line_height)
         ascii_lines_html += f'    <text x="15" y="{y_pos}" class="ascii-gray">{escaped_line}</text>\n'
 
-    svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg">
+    svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
   <style>
     .bg {{ fill: #0d1117; rx: 8px; }}
     .ascii-gray {{ font: 10px 'Courier New', monospace; fill: #8b949e; white-space: pre; }}
@@ -120,11 +120,10 @@ def generate_svg():
   <!-- PAINEL TERMINAL -->
   <g transform="translate(350, 0)">
     <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
-    ,
     <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
     <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
     <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
-    <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code</text>
+    <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
     
     <text x="0" y="165" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
     <text x="0" y="185" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
