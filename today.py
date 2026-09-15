@@ -39,12 +39,12 @@ def get_stats():
     """
     res = query_graphql(query, {"user": USER_NAME})
     data = res["data"]["user"]
-    
+
     repos = data["repositories"]["totalCount"]
     stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
     commits = data["contributionsCollection"]["totalCommitContributions"]
     followers = data["followers"]["totalCount"]
-    
+
     loc_additions = commits * 145
     loc_deletions = commits * 32
     total_loc = loc_additions - loc_deletions
@@ -61,34 +61,34 @@ def get_stats():
 
 def generate_svg():
     stats = get_stats()
-    
+
+    # Arte ASCII gerada a partir da foto de perfil (níveis de cinza -> caracteres)
     ascii_art = [
-        " 0k%@@@B%hn]<;;/cvc+xv{*@@8&|,UbLuOMdJmWuQ8",
-        " [</m%@@@@@*Qj<1ohq)fnnULzXv~^[OCwqOWkm@mm*",
-        " j|[{L8@@@@@@@Munoa/i!`     .^\"[OMhcM&oWL0M",
-        " OqkqL*@@@@@@@@Bz_[;   .''.      \"_b@%mOw%#",
-        " @@@%&B@@@@@@@@@BX. .,>+_-_<!!>:^..[@MaqLx>",
-        " @@@@@@@@@@@@@@@@j ^~?][}{))))|||_`\"pY/!`^<",
-        " @@@@@@@@@@@@@@@W*>`_!\"^`\"!-[[{)frr<`)f|![0&",
-        " QwZd8@@@@@@@@@p)^_!      .<i^^,<]{!?><c&@#",
-        " _|tuJmkWB@@@@@n!~->'     \"{<     ^><tO8%m|",
-        " _-1/)fnUCCOZkM1;__-+>:^^>_1)'    ,fo8hqZUZ",
-        " }?+_]1}]{/jfuQ[,><++>!;:^:>+~,,,_tUCx(--no",
-        " ,;>>>-)1){(fffi:;;<>.'^,;+;,;,+}1tLUXc{?|j",
-        " '`\";<-[}1{}-__,,::;!,::!~?-:'\"'_+1Um|~_<[|",
-        " +\".;][[1tjnf/?\"`,,,^:<>>>~_[~,>i~-1//]_]_>",
-        " r-,})[+}nurnz|]````.':;!<_[];:!i]-??+<;+-1",
-        " t?[juujjxrff1<,;;,^   `^\",\"'`:>_~1)}]1+,:-",
-        " nczvunxrf/||)[>,,:;:^'     ';!^;,.:/jf)->+",
-        " jxjjjjftt/|((((1_!,:!i!!;i+_[n):   `[x(_]]",
-        " nrfjjfjttt/||)))|)}_<>>><+_?{xO0v_'  `[x|~",
-        " ujfjjtrjfftt/|||((|/|()1)(|fxuuzZmQn_' >Ur",
-        " jftjffjrjjjfjftttttttttfjjrxrxnuvczUCJx-1Y",
-        " /|||fj/jxjjjjrjjjjjjjjjjjjjrrxxnuvcvucUY~;",
-        " ()(|tt|(nxjjjrrrrrrrrrrjjjrrrrrxxnuvccvcz_",
-        " ||/|)|))nujfjrxxxxxxxxrrjjjjjjrrxxxnuczzjx",
-        " ||){1))txrttjrxxxxnnxxrjjjffjjjrxxnnuuczn|",
-        " |11))(/tjjtfjrxxxxuuunxrjfffffjxxnuuuvccx/"
+        '=-=*+=:..:=+*+==*+-+#=+=.=-======--=:=+=-==-..',
+        '=--***+: ..:=*##**+=+--+::--*+==::---+::+*-..-',
+        '===+--==-.  .:=*##=-=+==...-#=:=-::-:=.:+=:--+',
+        ':::-=++**+:    .:+=.-*+**###%#=::-.:.-:..:=**=',
+        '***+==-----.     .-++%@@@@@@@@%*+:.:-:.-+*#+:.',
+        '#*=-:.......      .=%@%##*####%%%=.:-=**+-:.  ',
+        '#**+-.             +%#******+++*%*-+#%*-:. :..',
+        '%%##*=:...       .:###%%%%#****+*#+**-. ......',
+        '%%%#***+==:..    .*#*%@@@@%*%@@%###+:.-=::....',
+        '%%#####**++=--::.:#**##%%#*+#@@@%+:::--++-:...',
+        '%%#***#******+++==###*###%######+-=+**-::...  ',
+        '@##%%%%%###****++*####%%##*##%**+-=+**+:  ... ',
+        '##**###%%%***+++*#%#######**#%##*==****+--==--',
+        '%%#+===+#****====*%%%%%###***##*****#***#*+-=*',
+        '%%%#+*++*+=++++++###%%@@%%#%%###****##**#%#*%%',
+        '#%#+*++=====+++++*####%%%%%%##%%@#++*#**######',
+        '#*+++++++++++++++++**######**==#@@%*+********#',
+        '*++++++=++++++++++++++******+==--+#@%++##*****',
+        '++++++++++++++++++++++++++++========**=*%####*',
+        '++++++=+++++++++++++++++++++++=======+#+++*##*',
+        '++++*+=++++++=+++++++++++++++++=======+#####%#',
+        '+++*+=+++++++=++++=====+++++++++======++******',
+        '+++*++++**+++++++++=====+++++++=======+=***++*',
+        '++*+++++++++++++++=======++++++++++===+=******',
+        '++*++++++*++++++++=======++++++++=====+=*+==--'
     ]
 
     ascii_lines_html = ""
@@ -99,7 +99,7 @@ def generate_svg():
         y_pos = start_y + (i * line_height)
         ascii_lines_html += f'    <text x="15" y="{y_pos}">{escaped_line}</text>\n'
 
-    svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+    svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg {{ fill: #0d1117; rx: 8px; }}
     .ascii-gray {{ font: 10px 'Courier New', monospace; fill: #8b949e; white-space: pre; }}
@@ -112,7 +112,7 @@ def generate_svg():
     .line {{ font: 12px 'Courier New', monospace; fill: #30363d; }}
   </style>
   <rect width="100%" height="100%" class="bg" />
-  
+
   <!-- FOTO DE PERFIL ASCII CINZA -->
   <g class="ascii-gray" fill="#8b949e">
 {ascii_lines_html}  </g>
@@ -124,16 +124,16 @@ def generate_svg():
     <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
     <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
     <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
-    
+
     <text x="0" y="165" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
     <text x="0" y="185" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
     <text x="0" y="205" class="blue">. Languages.Real: <tspan class="line">............</tspan> <tspan class="white">Português, English Basic</tspan></text>
-    
+
     <text x="0" y="245" class="title">- Contact <tspan class="line">-------------------------------------------------</tspan></text>
     <text x="0" y="270" class="orange">. Email: <tspan class="line">...............................</tspan> <tspan class="blue">marcopassarela@gmail.com</tspan></text>
     <text x="0" y="290" class="orange">. LinkedIn: <tspan class="line">............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
     <text x="0" y="310" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
-    
+
     <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
     <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
     <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
