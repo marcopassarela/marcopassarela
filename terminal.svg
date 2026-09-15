@@ -1,7 +1,7 @@
 <svg fill="none" width="850" height="430" viewBox="0 0 850 430" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; rx: 8px; }
-    .ascii { font: bold 12px 'Courier New', monospace; fill: #58a6ff; }
+    .ascii { font: 10px 'Courier New', monospace; fill: #58a6ff; white-space: pre; }
     .title { font: bold 13px 'Courier New', monospace; fill: #58a6ff; }
     .white { font: 12px 'Courier New', monospace; fill: #c9d1d9; }
     .green { font: bold 12px 'Courier New', monospace; fill: #3fb950; }
@@ -12,32 +12,39 @@
   </style>
   <rect width="100%" height="100%" class="bg" />
   
-  <!-- ASCII ART (IMAGEM EM CÓDIGO) -->
-  <g class="ascii">
-    <text x="25" y="40">      .--------.</text>
-    <text x="25" y="55">     /  -   -  \</text>
-    <text x="25" y="70">    |  (o) (o)  |</text>
-    <text x="25" y="85">    |     _     |</text>
-    <text x="25" y="100">     \  `---'  /</text>
-    <text x="25" y="115">      `-------'</text>
-    <text x="25" y="135">     /|   .   |\</text>
-    <text x="25" y="150">    / |   .   | \</text>
-    <text x="25" y="165">   *  |   .   |  *</text>
-    <text x="25" y="180">      |___|___|</text>
-    <text x="25" y="195">      (____|____)</text>
-    <text x="25" y="210">       |   |   |</text>
-    <text x="25" y="225">       |   |   |</text>
-    <text x="25" y="240">       |   |   |</text>
-    <text x="25" y="255">       |___|___|</text>
-    <text x="25" y="270">       (___|___)</text>
-    <text x="25" y="285">      //       \</text>
-    <text x="25" y="300">     //         \</text>
-    <text x="25" y="315">    //           \</text>
-    <text x="25" y="330">   (/             \)</text>
+  <!-- ARTE ASCII DA FOTO DE PERFIL REAL -->
+  <g>
+    <text x="20" y="32" class="ascii">0mu\X#$@&amp;0/tY0v[mY&gt;zcZ&amp;UwLmOOUbp0*zz0hUZ@@</text>
+    <text x="20" y="46" class="ascii">QoQ_-(k$@$#v-!_)\UxmkjBZwX[YX*BokqY8o{z@$#</text>
+    <text x="20" y="60" class="ascii">JCuXdZO#$$$Bdt?&gt;rLUfCz$$$c[8ZZBda*Z$c{d&amp;#x</text>
+    <text x="20" y="74" class="ascii">M88pLx/-UB@$$$kjx$Wfvczjf-!Q*&amp;k@&amp;Bk8%$Mx(X</text>
+    <text x="20" y="88" class="ascii">QvrCJJLUuq$@@@$$wUk}&quot;&#160;&#160;&#160;&#160;&#160;&#x27;ivph@8ho$on+~08</text>
+    <text x="20" y="102" class="ascii">!-CpoM#B@&amp;$$$$@@$L!.&#160;,i&gt;:&#x27;&#x27;&#160;&#160;.Z$8W8Q)jLa$$</text>
+    <text x="20" y="116" class="ascii">?\Qh$$$$@$$$$$$@@M^`?)|//|\\[.[%wt&lt;;X%$@B@</text>
+    <text x="20" y="130" class="ascii">!+&gt;}0%$$$@@$$$$@$0`]_&lt;_{\tfvY[iUt,/a$@@W#$</text>
+    <text x="20" y="144" class="ascii">`^!]jLh#M$$$@@@@M[+i&#160;&#160;&#160;&#160;i-&gt;+(t_{[m$$@&amp;B$$$</text>
+    <text x="20" y="158" class="ascii">&#160;`;-{][nYq*B$$$$z&lt;{i&#160;&#160;&#160;.]]&#160;&#160;&#160;`_(p$WxLa8@$@</text>
+    <text x="20" y="172" class="ascii">&#x27;`~&lt;-[})jjc0Zmd8t~{}]&lt;;~(/`&#160;&#160;,Y%aqwkvmM%@@</text>
+    <text x="20" y="186" class="ascii">&quot;!?1{-{[-{\)tvzm1!-]&lt;!!:&gt;_+~]xmQu[xM%@$$$@</text>
+    <text x="20" y="200" class="ascii">&#160;_i&#160;`:^!__|j/|tt~!&gt;-,`i?}!,&lt;(tdwn)\C$$$B@$</text>
+    <text x="20" y="214" class="ascii">~-r{~+;&#x27;,[(\rn\},;iii++-}[;&gt;-{UU[][)ZqCXwm</text>
+    <text x="20" y="228" class="ascii">::[QJOc+_t}\UYCc_&#x27;,`^++-1\~&lt;-}{|[])(}?\pO(</text>
+    <text x="20" y="242" class="ascii">^:.|jrv[/YunYzc|~i:&#x27;&#160;.,!~&quot;;+]|f{{&lt;i\};&lt;\&lt;^</text>
+    <text x="20" y="256" class="ascii">&gt;`-()/XJLCJXuxr(&lt;;i&gt;:&#x27;.&#160;&#160;&#x27;&lt;;&gt;&quot;-cc\_[?+;i:,</text>
+    <text x="20" y="270" class="ascii">;[nXzzcXccvunxrrj(+i&lt;~&lt;&lt;-]ru!&#160;&#x27;_vt11{[]}{-</text>
+    <text x="20" y="284" class="ascii">[zzuurzzccvvunxrfjr\[??]})xwbX-&#x27;`\c][11()-</text>
+    <text x="20" y="298" class="ascii">nnxnufYvvcczvvunnxrxnxxnuzUYQddC1,Uz`;~-[)</text>
+    <text x="20" y="312" class="ascii">jxurrnXnnvvzzcccvvvvvvvczzXYUCL0wL{uf}]&gt;&lt;)</text>
+    <text x="20" y="326" class="ascii">frur/UufrvnuYzczzzzzzzzzzzXXYUCCJ0Y&gt;tr(?&lt;]</text>
+    <text x="20" y="340" class="ascii">ffu/rCrrxrxjUXvzXXYYXXzzzzzzXYYJLLJr?~i&gt;!!</text>
+    <text x="20" y="354" class="ascii">jjr|UvrxttfnYvuzXYYYYXzcvvczXYUUJQYYnfxxnt</text>
+    <text x="20" y="368" class="ascii">jr\rXxrttjrucuvXXYYJJYXcvuucYYYUCLYzx1(|t1</text>
+    <text x="20" y="382" class="ascii">rj|vxjfrxnnuuvcXYYUJJUXcunxuzXvXLQzcv}t\/(</text>
+    <text x="20" y="396" class="ascii">r/|xfrxf/tjxuvcXYYUUJUXcnxrrncYJLOYuX|Cwbh</text>
   </g>
 
   <!-- PAINEL DE INFORMAÇÕES ALINHADO À DIREITA -->
-  <g transform="translate(230, 0)">
+  <g transform="translate(350, 0)">
     <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
     
     <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
@@ -56,7 +63,7 @@
     
     <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
     <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">8</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">0</tspan></text>
-    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">532</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
-    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">60,116</tspan> ( <tspan class="green">77,140++</tspan>, <tspan class="red">17,024--</tspan> )</text>
+    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">534</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
+    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">60,342</tspan> ( <tspan class="green">77,430++</tspan>, <tspan class="red">17,088--</tspan> )</text>
   </g>
 </svg>
