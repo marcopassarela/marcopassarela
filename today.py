@@ -67,13 +67,13 @@ def generate_svg():
     svg = f'''<svg fill="none" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg {{ fill: #0d1117; rx: 7px; }}
-    .title {{ font: bold 12px 'Courier New', monospace; fill: #58a6ff; }}
-    .white {{ font: 11px 'Courier New', monospace; fill: #c9d1d9; }}
-    .green {{ font: bold 11px 'Courier New', monospace; fill: #3fb950; }}
-    .blue {{ font: 11px 'Courier New', monospace; fill: #58a6ff; }}
-    .orange {{ font: 11px 'Courier New', monospace; fill: #d29922; }}
-    .red {{ font: 11px 'Courier New', monospace; fill: #f85149; }}
-    .line {{ font: 11px 'Courier New', monospace; fill: #30363d; }}
+    .title { font: bold 9px 'Courier New', monospace; }
+    .white { font: 8px 'Courier New', monospace; }
+    .green { font: bold 8px 'Courier New', monospace; }
+    .blue { font: 8px 'Courier New', monospace; }
+    .orange { font: 8px 'Courier New', monospace; }
+    .red { font: 8px 'Courier New', monospace; }
+    .line { font: 8px 'Courier New', monospace; }
   </style>
   <rect width="100%" height="100%" class="bg" />
 
