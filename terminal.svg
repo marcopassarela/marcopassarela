@@ -13,7 +13,7 @@
 
   <!-- PAINEL TERMINAL -->
   <g transform="translate(30, 0)">
-    <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
+    <text x="0" y="35" class="title">@marcopassarela <tspan class="line">----------------------------------------------------</tspan></text>
     <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
     <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
     <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
@@ -30,7 +30,7 @@
 
     <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
     <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">8</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">0</tspan></text>
-    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">542</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
-    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">61,246</tspan> ( <tspan class="green">78,590++</tspan>, <tspan class="red">17,344--</tspan> )</text>
+    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">543</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
+    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">61,359</tspan> ( <tspan class="green">78,735++</tspan>, <tspan class="red">17,376--</tspan> )</text>
   </g>
 </svg>
