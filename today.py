@@ -1,0 +1,4 @@
+- 📦 Repositórios: <!-- REPOS -->0
+- ⭐ Estrelas: <!-- STARS -->0
+- 💻 Commits: <!-- COMMITS -->0
+- 👥 Seguidores: <!-- FOLLOWERS -->0
