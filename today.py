@@ -65,16 +65,17 @@ def generate_svg():
     svg_height = 440
 
     svg = f'''<svg fill="none" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bg {{ fill: #0d1117; rx: 7px; }}
-    .title { font: bold 9px 'Courier New', monospace; }
-    .white { font: 8px 'Courier New', monospace; }
-    .green { font: bold 8px 'Courier New', monospace; }
-    .blue { font: 8px 'Courier New', monospace; }
-    .orange { font: 8px 'Courier New', monospace; }
-    .red { font: 8px 'Courier New', monospace; }
-    .line { font: 8px 'Courier New', monospace; }
-  </style>
+  css = f"""
+<style>
+.title {{ font: bold 9px 'Courier New', monospace; }}
+.white {{ font: 8px 'Courier New', monospace; }}
+.green {{ font: bold 8px 'Courier New', monospace; }}
+.blue {{ font: 8px 'Courier New', monospace; }}
+.orange {{ font: 8px 'Courier New', monospace; }}
+.red {{ font: 8px 'Courier New', monospace; }}
+.line {{ font: 8px 'Courier New', monospace; }}
+</style>
+"""
   <rect width="100%" height="100%" class="bg" />
 
   <!-- PAINEL TERMINAL -->
