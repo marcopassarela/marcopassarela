@@ -79,7 +79,7 @@ def generate_svg():
 
   <!-- PAINEL TERMINAL -->
   <g transform="translate(30, 0)">
-    <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
+    <text x="0" y="35" class="title">@marcopassarela <tspan class="line">----------------------------------------------------</tspan></text>
     <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
     <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
     <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
