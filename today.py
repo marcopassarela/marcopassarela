@@ -38,12 +38,12 @@ def get_stats():
     """
     res = query_graphql(query, {"user": USER_NAME})
     data = res["data"]["user"]
-    
+
     repos = data["repositories"]["totalCount"]
     stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
     commits = data["contributionsCollection"]["totalCommitContributions"]
     followers = data["followers"]["totalCount"]
-    
+
     loc_additions = commits * 145
     loc_deletions = commits * 32
     total_loc = loc_additions - loc_deletions
@@ -60,40 +60,45 @@ def get_stats():
 
 def generate_svg():
     stats = get_stats()
-    
-    svg = f'''<svg fill="none" width="600" height="420" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+
+    svg_width = 500
+    svg_height = 440
+
+    svg = f'''<svg fill="none" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg {{ fill: #0d1117; rx: 8px; }}
-    .title {{ font: bold 14px 'Courier New', monospace; fill: #58a6ff; }}
-    .white {{ font: 13px 'Courier New', monospace; fill: #c9d1d9; }}
-    .green {{ font: bold 13px 'Courier New', monospace; fill: #3fb950; }}
-    .blue {{ font: 13px 'Courier New', monospace; fill: #58a6ff; }}
-    .orange {{ font: 13px 'Courier New', monospace; fill: #d29922; }}
-    .red {{ font: 13px 'Courier New', monospace; fill: #f85149; }}
-    .line {{ font: 13px 'Courier New', monospace; fill: #30363d; }}
+    .title {{ font: bold 13px 'Courier New', monospace; fill: #58a6ff; }}
+    .white {{ font: 12px 'Courier New', monospace; fill: #c9d1d9; }}
+    .green {{ font: bold 12px 'Courier New', monospace; fill: #3fb950; }}
+    .blue {{ font: 12px 'Courier New', monospace; fill: #58a6ff; }}
+    .orange {{ font: 12px 'Courier New', monospace; fill: #d29922; }}
+    .red {{ font: 12px 'Courier New', monospace; fill: #f85149; }}
+    .line {{ font: 12px 'Courier New', monospace; fill: #30363d; }}
   </style>
   <rect width="100%" height="100%" class="bg" />
-  
-  <text x="20" y="30" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
-  
-  <text x="20" y="60" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
-  <text x="20" y="80" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
-  <text x="20" y="100" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
-  <text x="20" y="120" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
-  
-  <text x="20" y="160" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
-  <text x="20" y="180" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
-  <text x="20" y="200" class="blue">. Languages.Real: <tspan class="line">............</tspan> <tspan class="white">Português, English Basic</tspan></text>
-  
-  <text x="20" y="240" class="title">- Contact <tspan class="line">-------------------------------------------------</tspan></text>
-  <text x="20" y="265" class="orange">. Email: <tspan class="line">...............................</tspan> <tspan class="blue">seu-email@exemplo.com</tspan></text>
-  <text x="20" y="285" class="orange">. LinkedIn: <tspan class="line">............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
-  <text x="20" y="305" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
-  
-  <text x="20" y="345" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
-  <text x="20" y="370" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
-  <text x="20" y="390" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
-  <text x="20" y="410" class="orange">. Lines of Code: <tspan class="green">{stats['loc']}</tspan> ( <tspan class="green">{stats['loc_add']}++</tspan>, <tspan class="red">{stats['loc_del']}--</tspan> )</text>
+
+  <!-- PAINEL TERMINAL -->
+  <g transform="translate(30, 0)">
+    <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
+    <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
+    <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
+    <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
+    <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
+
+    <text x="0" y="165" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
+    <text x="0" y="185" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
+    <text x="0" y="205" class="blue">. Languages.Real: <tspan class="line">............</tspan> <tspan class="white">Português, English Basic</tspan></text>
+
+    <text x="0" y="245" class="title">- Contact <tspan class="line">-------------------------------------------------</tspan></text>
+    <text x="0" y="270" class="orange">. Email: <tspan class="line">...............................</tspan> <tspan class="blue">marcopassarela@gmail.com</tspan></text>
+    <text x="0" y="290" class="orange">. LinkedIn: <tspan class="line">............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
+    <text x="0" y="310" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
+
+    <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
+    <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
+    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
+    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">{stats['loc']}</tspan> ( <tspan class="green">{stats['loc_add']}++</tspan>, <tspan class="red">{stats['loc_del']}--</tspan> )</text>
+  </g>
 </svg>'''
 
     with open("terminal.svg", "w", encoding="utf-8") as f:
