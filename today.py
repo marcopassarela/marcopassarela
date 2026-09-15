@@ -1,6 +1,5 @@
 import os
 import requests
-import html
 
 USER_NAME = "marcopassarela"
 TOKEN = os.environ.get("TOKEN")
@@ -62,47 +61,12 @@ def get_stats():
 def generate_svg():
     stats = get_stats()
 
-    # Arte ASCII gerada a partir da foto de perfil (níveis de cinza -> caracteres)
-    ascii_art = [
-        '=-=*+=:..:=+*+==*+-+#=+=.=-======--=:=+=-==-..',
-        '=--***+: ..:=*##**+=+--+::--*+==::---+::+*-..-',
-        '===+--==-.  .:=*##=-=+==...-#=:=-::-:=.:+=:--+',
-        ':::-=++**+:    .:+=.-*+**###%#=::-.:.-:..:=**=',
-        '***+==-----.     .-++%@@@@@@@@%*+:.:-:.-+*#+:.',
-        '#*=-:.......      .=%@%##*####%%%=.:-=**+-:.  ',
-        '#**+-.             +%#******+++*%*-+#%*-:. :..',
-        '%%##*=:...       .:###%%%%#****+*#+**-. ......',
-        '%%%#***+==:..    .*#*%@@@@%*%@@%###+:.-=::....',
-        '%%#####**++=--::.:#**##%%#*+#@@@%+:::--++-:...',
-        '%%#***#******+++==###*###%######+-=+**-::...  ',
-        '@##%%%%%###****++*####%%##*##%**+-=+**+:  ... ',
-        '##**###%%%***+++*#%#######**#%##*==****+--==--',
-        '%%#+===+#****====*%%%%%###***##*****#***#*+-=*',
-        '%%%#+*++*+=++++++###%%@@%%#%%###****##**#%#*%%',
-        '#%#+*++=====+++++*####%%%%%%##%%@#++*#**######',
-        '#*+++++++++++++++++**######**==#@@%*+********#',
-        '*++++++=++++++++++++++******+==--+#@%++##*****',
-        '++++++++++++++++++++++++++++========**=*%####*',
-        '++++++=+++++++++++++++++++++++=======+#+++*##*',
-        '++++*+=++++++=+++++++++++++++++=======+#####%#',
-        '+++*+=+++++++=++++=====+++++++++======++******',
-        '+++*++++**+++++++++=====+++++++=======+=***++*',
-        '++*+++++++++++++++=======++++++++++===+=******',
-        '++*++++++*++++++++=======++++++++=====+=*+==--'
-    ]
+    svg_width = 500
+    svg_height = 440
 
-    ascii_lines_html = ""
-    start_y = 30
-    line_height = 14
-    for i, line in enumerate(ascii_art):
-        escaped_line = html.escape(line).replace(" ", "&#160;")
-        y_pos = start_y + (i * line_height)
-        ascii_lines_html += f'    <text x="15" y="{y_pos}">{escaped_line}</text>\n'
-
-    svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg">
+    svg = f'''<svg fill="none" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg {{ fill: #0d1117; rx: 8px; }}
-    .ascii-gray {{ font: 10px 'Courier New', monospace; fill: #8b949e; white-space: pre; }}
     .title {{ font: bold 13px 'Courier New', monospace; fill: #58a6ff; }}
     .white {{ font: 12px 'Courier New', monospace; fill: #c9d1d9; }}
     .green {{ font: bold 12px 'Courier New', monospace; fill: #3fb950; }}
@@ -113,17 +77,13 @@ def generate_svg():
   </style>
   <rect width="100%" height="100%" class="bg" />
 
-  <!-- FOTO DE PERFIL ASCII CINZA -->
-  <g class="ascii-gray" fill="#8b949e">
-{ascii_lines_html}  </g>
-
   <!-- PAINEL TERMINAL -->
-  <g transform="translate(350, 0)">
+  <g transform="translate(30, 0)">
     <text x="0" y="35" class="title">marco@passarela <tspan class="line">------------------------------------</tspan></text>
     <text x="0" y="65" class="white">. OS: <tspan class="line">................................</tspan> Windows 11, Linux</text>
     <text x="0" y="85" class="white">. Uptime: <tspan class="line">............................</tspan> 29 anos, 2 meses</text>
     <text x="0" y="105" class="white">. Host: <tspan class="line">..............................</tspan> Software Engineer</text>
-    <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code, Cursor AI</text>
+    <text x="0" y="125" class="white">. IDE: <tspan class="line">...............................</tspan> VS Code</text>
 
     <text x="0" y="165" class="blue">. Languages.Programming: <tspan class="line">.....</tspan> <tspan class="white">JavaScript, Python, TypeScript, C#</tspan></text>
     <text x="0" y="185" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
