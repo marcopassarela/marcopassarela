@@ -1,4 +1,4 @@
-- 📦 Repositórios: <!-- REPOS -->0
+- 📦 Repositórios: <!-- REPOS -->8
 - ⭐ Estrelas: <!-- STARS -->0
-- 💻 Commits: <!-- COMMITS -->0
-- 👥 Seguidores: <!-- FOLLOWERS -->0
+- 💻 Commits: <!-- COMMITS -->526
+- 👥 Seguidores: <!-- FOLLOWERS -->15
