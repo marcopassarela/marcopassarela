@@ -66,14 +66,14 @@ def generate_svg():
 
     svg = f'''<svg fill="none" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .bg {{ fill: #0d1117; rx: 8px; }}
-    .title {{ font: bold 13px 'Courier New', monospace; fill: #58a6ff; }}
-    .white {{ font: 12px 'Courier New', monospace; fill: #c9d1d9; }}
-    .green {{ font: bold 12px 'Courier New', monospace; fill: #3fb950; }}
-    .blue {{ font: 12px 'Courier New', monospace; fill: #58a6ff; }}
-    .orange {{ font: 12px 'Courier New', monospace; fill: #d29922; }}
-    .red {{ font: 12px 'Courier New', monospace; fill: #f85149; }}
-    .line {{ font: 12px 'Courier New', monospace; fill: #30363d; }}
+    .bg {{ fill: #0d1117; rx: 7px; }}
+    .title {{ font: bold 12px 'Courier New', monospace; fill: #58a6ff; }}
+    .white {{ font: 11px 'Courier New', monospace; fill: #c9d1d9; }}
+    .green {{ font: bold 11px 'Courier New', monospace; fill: #3fb950; }}
+    .blue {{ font: 11px 'Courier New', monospace; fill: #58a6ff; }}
+    .orange {{ font: 11px 'Courier New', monospace; fill: #d29922; }}
+    .red {{ font: 11px 'Courier New', monospace; fill: #f85149; }}
+    .line {{ font: 11px 'Courier New', monospace; fill: #30363d; }}
   </style>
   <rect width="100%" height="100%" class="bg" />
 
@@ -89,12 +89,12 @@ def generate_svg():
     <text x="0" y="185" class="blue">. Languages.Computer: <tspan class="line">........</tspan> <tspan class="white">HTML, CSS, JSON, MySQL</tspan></text>
     <text x="0" y="205" class="blue">. Languages.Real: <tspan class="line">............</tspan> <tspan class="white">Português, English Basic</tspan></text>
 
-    <text x="0" y="245" class="title">- Contact <tspan class="line">-------------------------------------------------</tspan></text>
+    <text x="0" y="245" class="title">- Contact <tspan class="line">----------------------------------------------------</tspan></text>
     <text x="0" y="270" class="orange">. Email: <tspan class="line">...............................</tspan> <tspan class="blue">marcopassarela@gmail.com</tspan></text>
     <text x="0" y="290" class="orange">. LinkedIn: <tspan class="line">............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
     <text x="0" y="310" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
 
-    <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
+    <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">----------------------------------------------------</tspan></text>
     <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
     <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
     <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">{stats['loc']}</tspan> ( <tspan class="green">{stats['loc_add']}++</tspan>, <tspan class="red">{stats['loc_del']}--</tspan> )</text>
