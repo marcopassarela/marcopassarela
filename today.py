@@ -55,7 +55,7 @@ def get_stats():
         "followers": f"{followers:,}",
         "loc": f"{total_loc:,}",
         "loc_add": f"{loc_additions:,}",
-        "loc_del": f"{loc_del_add := loc_deletions:,}"
+        "loc_del": f"{loc_deletions:,}"
     }
 
 def generate_svg():
@@ -65,10 +65,10 @@ def generate_svg():
   <style>
     .bg {{ fill: #0d1117; rx: 8px; }}
     .title {{ font: bold 14px 'Courier New', monospace; fill: #58a6ff; }}
-    .label {{ font: 13px 'Courier New', monospace; fill: #8b949e; }}
     .white {{ font: 13px 'Courier New', monospace; fill: #c9d1d9; }}
     .green {{ font: bold 13px 'Courier New', monospace; fill: #3fb950; }}
     .blue {{ font: 13px 'Courier New', monospace; fill: #58a6ff; }}
+    .orange {{ font: 13px 'Courier New', monospace; fill: #d29922; }}
     .red {{ font: 13px 'Courier New', monospace; fill: #f85149; }}
     .line {{ font: 13px 'Courier New', monospace; fill: #30363d; }}
   </style>
@@ -91,8 +91,8 @@ def generate_svg():
   <text x="20" y="305" class="orange">. GitHub: <tspan class="line">..............................</tspan> <tspan class="blue">marcopassarela</tspan></text>
   
   <text x="20" y="345" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
-  <text x="20" y="370" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> Stars: <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
-  <text x="20" y="390" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> Followers: <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
+  <text x="20" y="370" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">{stats['repos']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">{stats['stars']}</tspan></text>
+  <text x="20" y="390" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">{stats['commits']}</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">{stats['followers']}</tspan></text>
   <text x="20" y="410" class="orange">. Lines of Code: <tspan class="green">{stats['loc']}</tspan> ( <tspan class="green">{stats['loc_add']}++</tspan>, <tspan class="red">{stats['loc_del']}--</tspan> )</text>
 </svg>'''
 
