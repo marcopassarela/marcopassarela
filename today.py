@@ -9,8 +9,8 @@ HEADERS = {"Authorization": f"bearer {TOKEN}"} if TOKEN else {}
 
 def query_graphql(query, variables):
     response = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query, 'variables': variables},
+        "https://api.github.com/graphql",
+        json={"query": query, "variables": variables},
         headers=HEADERS
     )
     if response.status_code == 200:
@@ -37,12 +37,13 @@ def get_stats():
       }
     }
     """
-    data = query_graphql(query, {"user": USER_NAME})['data']['user']
+    res = query_graphql(query, {"user": USER_NAME})
+    data = res["data"]["user"]
     
-    total_repos = data['repositories']['totalCount']
-    total_stars = sum(repo['stargazerCount'] for repo in data['repositories']['nodes'])
-    total_commits = data['contributionsCollection']['totalCommitContributions']
-    total_followers = data['followers']['totalCount']
+    total_repos = data["repositories"]["totalCount"]
+    total_stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
+    total_commits = data["contributionsCollection"]["totalCommitContributions"]
+    total_followers = data["followers"]["totalCount"]
     
     return {
         "repos": total_repos,
@@ -53,7 +54,7 @@ def get_stats():
 
 def update_readme():
     stats = get_stats()
-    print(f"Estatísticas coletadas: {stats}")
+    print(f"Estatísticas atualizadas: {stats}")
 
     if os.path.exists("README.md"):
         with open("README.md", "r", encoding="utf-8") as f:
