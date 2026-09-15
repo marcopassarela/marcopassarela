@@ -97,7 +97,7 @@ def generate_svg():
     for i, line in enumerate(ascii_art):
         escaped_line = html.escape(line).replace(" ", "&#160;")
         y_pos = start_y + (i * line_height)
-        ascii_lines_html += f'    <text x="15" y="{y_pos}" class="ascii-gray">{escaped_line}</text>\n'
+        ascii_lines_html += f'    <text x="15" y="{y_pos}">{escaped_line}</text>\n'
 
     svg = f'''<svg fill="none" width="850" height="420" viewBox="0 0 850 420" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
   <style>
@@ -114,7 +114,7 @@ def generate_svg():
   <rect width="100%" height="100%" class="bg" />
   
   <!-- FOTO DE PERFIL ASCII CINZA -->
-  <g>
+  <g class="ascii-gray" fill="#8b949e">
 {ascii_lines_html}  </g>
 
   <!-- PAINEL TERMINAL -->
