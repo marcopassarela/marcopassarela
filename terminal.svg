@@ -13,33 +13,33 @@
   <rect width="100%" height="100%" class="bg" />
   
   <!-- FOTO DE PERFIL ASCII CINZA -->
-  <g>
-    <text x="15" y="30" class="ascii-gray">&#160;0k%@@@B%hn]&lt;;;/cvc+xv{*@@8&amp;|,UbLuOMdJmWuQ8</text>
-    <text x="15" y="44" class="ascii-gray">&#160;[&lt;/m%@@@@@*Qj&lt;1ohq)fnnULzXv~^[OCwqOWkm@mm*</text>
-    <text x="15" y="58" class="ascii-gray">&#160;j|[{L8@@@@@@@Munoa/i!`&#160;&#160;&#160;&#160;&#160;.^&quot;[OMhcM&amp;oWL0M</text>
-    <text x="15" y="72" class="ascii-gray">&#160;OqkqL*@@@@@@@@Bz_[;&#160;&#160;&#160;.&#x27;&#x27;.&#160;&#160;&#160;&#160;&#160;&#160;&quot;_b@%mOw%#</text>
-    <text x="15" y="86" class="ascii-gray">&#160;@@@%&amp;B@@@@@@@@@BX.&#160;.,&gt;+_-_&lt;!!&gt;:^..[@MaqLx&gt;</text>
-    <text x="15" y="100" class="ascii-gray">&#160;@@@@@@@@@@@@@@@@j&#160;^~?][}{))))|||_`&quot;pY/!`^&lt;</text>
-    <text x="15" y="114" class="ascii-gray">&#160;@@@@@@@@@@@@@@@W*&gt;`_!&quot;^`&quot;!-[[{)frr&lt;`)f|![0&amp;</text>
-    <text x="15" y="128" class="ascii-gray">&#160;QwZd8@@@@@@@@@p)^_!&#160;&#160;&#160;&#160;&#160;&#160;.&lt;i^^,&lt;]{!?&gt;&lt;c&amp;@#</text>
-    <text x="15" y="142" class="ascii-gray">&#160;_|tuJmkWB@@@@@n!~-&gt;&#x27;&#160;&#160;&#160;&#160;&#160;&quot;{&lt;&#160;&#160;&#160;&#160;&#160;^&gt;&lt;tO8%m|</text>
-    <text x="15" y="156" class="ascii-gray">&#160;_-1/)fnUCCOZkM1;__-+&gt;:^^&gt;_1)&#x27;&#160;&#160;&#160;&#160;,fo8hqZUZ</text>
-    <text x="15" y="170" class="ascii-gray">&#160;}?+_]1}]{/jfuQ[,&gt;&lt;++&gt;!;:^:&gt;+~,,,_tUCx(--no</text>
-    <text x="15" y="184" class="ascii-gray">&#160;,;&gt;&gt;&gt;-)1){(fffi:;;&lt;&gt;.&#x27;^,;+;,;,+}1tLUXc{?|j</text>
-    <text x="15" y="198" class="ascii-gray">&#160;&#x27;`&quot;;&lt;-[}1{}-__,,::;!,::!~?-:&#x27;&quot;&#x27;_+1Um|~_&lt;[|</text>
-    <text x="15" y="212" class="ascii-gray">&#160;+&quot;.;][[1tjnf/?&quot;`,,,^:&lt;&gt;&gt;&gt;~_[~,&gt;i~-1//]_]_&gt;</text>
-    <text x="15" y="226" class="ascii-gray">&#160;r-,})[+}nurnz|]````.&#x27;:;!&lt;_[];:!i]-??+&lt;;+-1</text>
-    <text x="15" y="240" class="ascii-gray">&#160;t?[juujjxrff1&lt;,;;,^&#160;&#160;&#160;`^&quot;,&quot;&#x27;`:&gt;_~1)}]1+,:-</text>
-    <text x="15" y="254" class="ascii-gray">&#160;nczvunxrf/||)[&gt;,,:;:^&#x27;&#160;&#160;&#160;&#160;&#160;&#x27;;!^;,.:/jf)-&gt;+</text>
-    <text x="15" y="268" class="ascii-gray">&#160;jxjjjjftt/|((((1_!,:!i!!;i+_[n):&#160;&#160;&#160;`[x(_]]</text>
-    <text x="15" y="282" class="ascii-gray">&#160;nrfjjfjttt/||)))|)}_&lt;&gt;&gt;&gt;&lt;+_?{xO0v_&#x27;&#160;&#160;`[x|~</text>
-    <text x="15" y="296" class="ascii-gray">&#160;ujfjjtrjfftt/|||((|/|()1)(|fxuuzZmQn_&#x27;&#160;&gt;Ur</text>
-    <text x="15" y="310" class="ascii-gray">&#160;jftjffjrjjjfjftttttttttfjjrxrxnuvczUCJx-1Y</text>
-    <text x="15" y="324" class="ascii-gray">&#160;/|||fj/jxjjjjrjjjjjjjjjjjjjrrxxnuvcvucUY~;</text>
-    <text x="15" y="338" class="ascii-gray">&#160;()(|tt|(nxjjjrrrrrrrrrrjjjrrrrrxxnuvccvcz_</text>
-    <text x="15" y="352" class="ascii-gray">&#160;||/|)|))nujfjrxxxxxxxxrrjjjjjjrrxxxnuczzjx</text>
-    <text x="15" y="366" class="ascii-gray">&#160;||){1))txrttjrxxxxnnxxrjjjffjjjrxxnnuuczn|</text>
-    <text x="15" y="380" class="ascii-gray">&#160;|11))(/tjjtfjrxxxxuuunxrjfffffjxxnuuuvccx/</text>
+  <g class="ascii-gray" fill="#8b949e">
+    <text x="15" y="30">&#160;0k%@@@B%hn]&lt;;;/cvc+xv{*@@8&amp;|,UbLuOMdJmWuQ8</text>
+    <text x="15" y="44">&#160;[&lt;/m%@@@@@*Qj&lt;1ohq)fnnULzXv~^[OCwqOWkm@mm*</text>
+    <text x="15" y="58">&#160;j|[{L8@@@@@@@Munoa/i!`&#160;&#160;&#160;&#160;&#160;.^&quot;[OMhcM&amp;oWL0M</text>
+    <text x="15" y="72">&#160;OqkqL*@@@@@@@@Bz_[;&#160;&#160;&#160;.&#x27;&#x27;.&#160;&#160;&#160;&#160;&#160;&#160;&quot;_b@%mOw%#</text>
+    <text x="15" y="86">&#160;@@@%&amp;B@@@@@@@@@BX.&#160;.,&gt;+_-_&lt;!!&gt;:^..[@MaqLx&gt;</text>
+    <text x="15" y="100">&#160;@@@@@@@@@@@@@@@@j&#160;^~?][}{))))|||_`&quot;pY/!`^&lt;</text>
+    <text x="15" y="114">&#160;@@@@@@@@@@@@@@@W*&gt;`_!&quot;^`&quot;!-[[{)frr&lt;`)f|![0&amp;</text>
+    <text x="15" y="128">&#160;QwZd8@@@@@@@@@p)^_!&#160;&#160;&#160;&#160;&#160;&#160;.&lt;i^^,&lt;]{!?&gt;&lt;c&amp;@#</text>
+    <text x="15" y="142">&#160;_|tuJmkWB@@@@@n!~-&gt;&#x27;&#160;&#160;&#160;&#160;&#160;&quot;{&lt;&#160;&#160;&#160;&#160;&#160;^&gt;&lt;tO8%m|</text>
+    <text x="15" y="156">&#160;_-1/)fnUCCOZkM1;__-+&gt;:^^&gt;_1)&#x27;&#160;&#160;&#160;&#160;,fo8hqZUZ</text>
+    <text x="15" y="170">&#160;}?+_]1}]{/jfuQ[,&gt;&lt;++&gt;!;:^:&gt;+~,,,_tUCx(--no</text>
+    <text x="15" y="184">&#160;,;&gt;&gt;&gt;-)1){(fffi:;;&lt;&gt;.&#x27;^,;+;,;,+}1tLUXc{?|j</text>
+    <text x="15" y="198">&#160;&#x27;`&quot;;&lt;-[}1{}-__,,::;!,::!~?-:&#x27;&quot;&#x27;_+1Um|~_&lt;[|</text>
+    <text x="15" y="212">&#160;+&quot;.;][[1tjnf/?&quot;`,,,^:&lt;&gt;&gt;&gt;~_[~,&gt;i~-1//]_]_&gt;</text>
+    <text x="15" y="226">&#160;r-,})[+}nurnz|]````.&#x27;:;!&lt;_[];:!i]-??+&lt;;+-1</text>
+    <text x="15" y="240">&#160;t?[juujjxrff1&lt;,;;,^&#160;&#160;&#160;`^&quot;,&quot;&#x27;`:&gt;_~1)}]1+,:-</text>
+    <text x="15" y="254">&#160;nczvunxrf/||)[&gt;,,:;:^&#x27;&#160;&#160;&#160;&#160;&#160;&#x27;;!^;,.:/jf)-&gt;+</text>
+    <text x="15" y="268">&#160;jxjjjjftt/|((((1_!,:!i!!;i+_[n):&#160;&#160;&#160;`[x(_]]</text>
+    <text x="15" y="282">&#160;nrfjjfjttt/||)))|)}_&lt;&gt;&gt;&gt;&lt;+_?{xO0v_&#x27;&#160;&#160;`[x|~</text>
+    <text x="15" y="296">&#160;ujfjjtrjfftt/|||((|/|()1)(|fxuuzZmQn_&#x27;&#160;&gt;Ur</text>
+    <text x="15" y="310">&#160;jftjffjrjjjfjftttttttttfjjrxrxnuvczUCJx-1Y</text>
+    <text x="15" y="324">&#160;/|||fj/jxjjjjrjjjjjjjjjjjjjrrxxnuvcvucUY~;</text>
+    <text x="15" y="338">&#160;()(|tt|(nxjjjrrrrrrrrrrjjjrrrrrxxnuvccvcz_</text>
+    <text x="15" y="352">&#160;||/|)|))nujfjrxxxxxxxxrrjjjjjjrrxxxnuczzjx</text>
+    <text x="15" y="366">&#160;||){1))txrttjrxxxxnnxxrjjjffjjjrxxnnuuczn|</text>
+    <text x="15" y="380">&#160;|11))(/tjjtfjrxxxxuuunxrjfffffjxxnuuuvccx/</text>
   </g>
 
   <!-- PAINEL TERMINAL -->
@@ -61,7 +61,7 @@
     
     <text x="0" y="350" class="title">- GitHub Stats <tspan class="line">--------------------------------------------</tspan></text>
     <text x="0" y="375" class="orange">. Repos: <tspan class="line">....</tspan> <tspan class="green">8</tspan> <tspan class="line">|</tspan> <tspan class="orange">Stars:</tspan> <tspan class="line">..........</tspan> <tspan class="green">0</tspan></text>
-    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">536</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
-    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">60,568</tspan> ( <tspan class="green">77,720++</tspan>, <tspan class="red">17,152--</tspan> )</text>
+    <text x="0" y="395" class="orange">. Commits: <tspan class="line">..</tspan> <tspan class="green">537</tspan> <tspan class="line">|</tspan> <tspan class="orange">Followers:</tspan> <tspan class="line">......</tspan> <tspan class="green">15</tspan></text>
+    <text x="0" y="415" class="orange">. Lines of Code: <tspan class="green">60,681</tspan> ( <tspan class="green">77,865++</tspan>, <tspan class="red">17,184--</tspan> )</text>
   </g>
 </svg>
