@@ -222,13 +222,13 @@
     >
       . Commits:
       <tspan class="line">...</tspan>
-      <tspan class="green">922</tspan>
+      <tspan class="green">926</tspan>
 
       <tspan class="line"> | </tspan>
 
       <tspan class="orange">Followers:</tspan>
       <tspan class="line">.......</tspan>
-      <tspan class="green">17</tspan>
+      <tspan class="green">16</tspan>
     </text>
 
     <text
@@ -237,15 +237,15 @@
       class="orange"
     >
       . Lines of Code:
-      <tspan class="green">104,186</tspan>
+      <tspan class="green">104,638</tspan>
 
       <tspan class="line"> ( </tspan>
 
-      <tspan class="green">133,690++</tspan>
+      <tspan class="green">134,270++</tspan>
 
       <tspan class="line">, </tspan>
 
-      <tspan class="red">29,504--</tspan>
+      <tspan class="red">29,632--</tspan>
 
       <tspan class="line"> )</tspan>
     </text>
